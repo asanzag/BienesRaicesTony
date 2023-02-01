@@ -14,7 +14,7 @@
     $db = conectarDB();
 
     // Obtener los datos de la propiedad
-    $consulta = "SELECT * FROM propiedades WHERE id = ${id}";
+    $consulta = "SELECT * FROM propiedades WHERE id = {$id}";
     $resultado = mysqli_query($db, $consulta);
     $propiedad = mysqli_fetch_assoc($resultado);
 
@@ -37,9 +37,9 @@
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        echo "<pre>";
-        var_dump($_POST);
-        echo "</pre>";
+        //echo "<pre>";
+        //var_dump($_POST);
+        //echo "</pre>";
 
         // echo "<pre>";
         // var_dump($_FILES);
@@ -103,28 +103,37 @@
 
         if(empty($errores)) {
 
+            // Crear carpeta
+            $carpetaImagenes = '../../imagenes/';
+
+            if(!is_dir($carpetaImagenes)) {
+                mkdir($carpetaImagenes);
+            }
+
+            $nombreImagen = '';
+            
+
             /** SUBIDA DE ARCHIVOS */
 
-            // Crear carpeta
-            // $carpetaImagenes = '../../imagenes/';
+            if($imagen['name']) {
+                // Eliminar la imagen previa
 
-            // if(!is_dir($carpetaImagenes)) {
-            //     mkdir($carpetaImagenes);
-            // }
+                unlink($carpetaImagenes . $propiedad['imagen']);
 
-            // Generar un nombre unico
-            // $nombreImagen = md5( uniqid( rand(), true ) ) . ".jpg";
+                // Generar un nombre unico
+                $nombreImagen = md5( uniqid( rand(), true ) ) . ".jpg";
 
-            // Subir la imagen
+                // Subir la imagen
+                move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen );
 
-            // move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen );
-
+            } else {
+                $nombreImagen = $propiedad['imagen'];
+            }
 
             // Insertar en la BD
-            $query = " UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}', descripcion = '${descripcion}', habitaciones = ${habitaciones}, wc = ${wc}, estacionamiento = ${estacionamiento}, vendedorId = ${vendedorId} WHERE id = ${id} ";
+            $query = " UPDATE propiedades SET titulo = '{$titulo}', precio = '{$precio}', imagen = '{$nombreImagen}', descripcion = '{$descripcion}', habitaciones = {$habitaciones}, wc = {$wc}, estacionamiento = {$estacionamiento}, vendedorId = {$vendedorId} WHERE id = {$id} ";
 
             // echo $query;
-
 
             $resultado = mysqli_query($db, $query);
 
@@ -134,7 +143,6 @@
             }
 
         }
-
 
     }
 
