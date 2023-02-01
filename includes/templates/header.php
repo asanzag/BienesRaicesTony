@@ -28,6 +28,9 @@
                     <a href="blog.php">Blog</a>
                     <a href="contacto.php">Contacto</a>
                 </nav>
-            </div>
-        </div>
+            </div><!-- barra -->
+
+            <?php echo $inicio ? "<h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>" : ''; ?>
+        </div> 
+
     </header>
