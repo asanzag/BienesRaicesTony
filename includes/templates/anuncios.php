@@ -15,7 +15,7 @@
 
 <div class="contenedor-anuncios">
     <?php while($propiedad = mysqli_fetch_assoc($resultado)): ?>
-    <div data-aos="flip-left" data-aos-duration="5000" class="anuncio">
+    <div data-aos="flip-left" data-aos-duration="1000" class="anuncio">
 
         <img loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="anuncio">
 

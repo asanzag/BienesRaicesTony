@@ -15,6 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienes Raices</title>
     <link rel="stylesheet" href="/build/css/app.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 
 <body>
@@ -23,14 +28,14 @@
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">
-                    <img src="/build/img/logo.svg" alt="Logotipo de Bienes Raices">
+                    <img data-aos="zoom-in-right" data-aos-duration="1000" src="/build/img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
 
                 <div class="mobile-menu">
                     <img src="/build/img/barras.svg" alt="icono menu responsive">
                 </div>
 
-                <nav class="navegacion">
+                <nav class="animate__animated animate__heartBeat navegacion">
                     <a href="nosotros.php">Nosotros</a>
                     <a href="anuncios.php">Anuncios</a>
                     <a href="blog.php">Blog</a>

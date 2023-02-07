@@ -7,7 +7,7 @@
         <h1>Más Sobre Nosotros</h1>
 
         <div class="iconos-nosotros">
-            <div data-aos="fade-right" data-aos-duration="4000" class="icono">
+            <div data-aos="fade-right" data-aos-duration="1000" class="icono">
                 <img src="build/img/icono1.svg" alt="Icono Seguridad" loading="lazy">
                 <h3>Seguridad</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui eius voluptatem provident, veritatis
@@ -15,7 +15,7 @@
                     eaque nihil, consectetur eveniet odio.
                 </p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="4000" class="icono">
+            <div data-aos="fade-up" data-aos-duration="1000" class="icono">
                 <img src="build/img/icono2.svg" alt="Icono Precio" loading="lazy">
                 <h3>Precio</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui eius voluptatem provident, veritatis
@@ -23,7 +23,7 @@
                     eaque nihil, consectetur eveniet odio.
                 </p>
             </div>
-            <div data-aos="fade-left" data-aos-duration="4000" class="icono">
+            <div data-aos="fade-left" data-aos-duration="1000" class="icono">
                 <img src="build/img/icono3.svg" alt="Icono Tiempo" loading="lazy">
                 <h3>Tiempo</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui eius voluptatem provident, veritatis
@@ -49,8 +49,8 @@
     </section>
 
     <section class="imagen-contacto">
-        <h2>Encuentra la casa de tus sueños</h2>
-        <p>Llena el formulario de contacto y un asesor se pondrá en contacto contigo a la mayor brevedad</p>
+        <h2 data-aos="fade-right" data-aos-duration="2000">Encuentra la casa de tus sueños</h2>
+        <p data-aos="fade-left" data-aos-duration="2000">Llena el formulario de contacto y un asesor se pondrá en contacto contigo a la mayor brevedad</p>
         <a href="contacto.php" class="boton-amarillo">Contáctanos</a>
     </section>
 
@@ -58,7 +58,7 @@
         <section class="blog">
             <h3>Nuestro Blog</h3>
 
-            <article class="entrada-blog">
+            <article data-aos="zoom-in-up" data-aos-duration="1000" class="entrada-blog">
                 <div class="imagen">
                     <picture>
                         <source srcset="build/img/blog1.webp" type="image/webp">
@@ -79,7 +79,7 @@
                     </a>
                 </div>
             </article>
-            <article class="entrada-blog">
+            <article data-aos="zoom-in-up" data-aos-duration="1000" class="entrada-blog">
                 <div class="imagen">
                     <picture>
                         <source srcset="build/img/blog2.webp" type="image/webp">
@@ -105,7 +105,7 @@
         <section class="testimoniales">
             <h3>Testimoniales</h3>
 
-            <div class="testimonial">
+            <div data-aos="flip-left" data-aos-duration="3000" class="testimonial">
                 <blockquote>
                     El personal se comportó de una excelente forma, muy buena atención y la casa que ofrecieron cumple
                     con todas mis expectativas
